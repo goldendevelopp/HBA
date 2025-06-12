@@ -1,0 +1,299 @@
+:root {
+  --azul-marino: #0F1A3D;
+  --azul-marino-claro: #1A2B50;
+  --beige: #F5F1E8;
+  --beige-oscuro: #E8E2D6;
+  --gris-claro: #E0E0E0;
+  --gris-oscuro: #4A4A4A;
+  --blanco: #FFFFFF;
+  --dorado: #D4AF37;
+  --celeste: #87CEEB;
+  --azul-claro: #E1F5FE;
+  --amarillo-solar: #FFDE59;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+/* Encabezado Solar */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background: var(--blanco);
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--gris-claro);
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, 
+              rgba(255, 222, 89, 0.1) 0%, 
+              transparent 60%);
+    pointer-events: none;
+}
+
+header img {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--azul-marino);
+    box-shadow: 0 4px 12px rgba(15, 26, 61, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+header img:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(15, 26, 61, 0.15);
+}
+
+nav {
+    background-color: var(--azul-marino);
+    margin-bottom: 60px;
+    padding: 0 40px;
+    position: relative;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 10px 30px rgba(15, 26, 61, 0.2);
+}
+
+nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--degrade-piel);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    padding: 22px 35px;
+    position: relative;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-icon {
+    margin-right: 10px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+nav li::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 35px;
+    right: 35px;
+    height: 2px;
+    background-color: var(--dorado);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: center;
+}
+
+nav li:hover::after {
+    transform: scaleX(1);
+}
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+nav a:hover .nav-icon {
+    opacity: 1;
+    transform: rotate(45deg);
+}
+
+/* Sección de Protector Solar Premium */
+.maquillaje-section {
+    margin: 0 auto 60px;
+    padding: 40px;
+    background-color: var(--blanco);
+    text-align: center;
+    width: 400px;
+    border: 1px solid var(--gris-claro);
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.maquillaje-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.maquillaje-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--azul-marino), var(--amarillo-solar));
+}
+
+.maquillaje-section h2 {
+    color: var(--azul-marino);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.maquillaje-section h2::after {
+    content: 'FPS 50+';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--amarillo-solar);
+    color: var(--azul-marino);
+    padding: 3px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.maquillaje-section h1 {
+    color: var(--azul-marino);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.maquillaje-section p {
+    color: var(--gris-oscuro);
+    font-size: 1rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Efecto de Rayos Solares */
+.maquillaje-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle, 
+            rgba(255, 222, 89, 0.05) 0%, 
+            transparent 70%),
+        repeating-conic-gradient(
+            from 0deg,
+            transparent 0deg 10deg,
+            rgba(255, 222, 89, 0.03) 10deg 15deg
+        );
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.maquillaje-section:hover::after {
+    opacity: 1;
+    animation: rotateSun 60s linear infinite;
+}
+
+@keyframes rotateSun {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Texto informativo adicional */
+.maquillaje-section .info-extra {
+    font-size: 0.9rem;
+    color: var(--gris-oscuro);
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--azul-claro);
+    border-left: 3px solid var(--amarillo-solar);
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+    }
+    
+    nav li {
+        padding: 15px 20px;
+    }
+    
+    .maquillaje-section {
+        width: 90%;
+        padding: 30px 20px;
+    }
+    
+    .maquillaje-section::after {
+        width: 300%;
+        height: 300%;
+    }
+}
+
+/* Efecto de brillo solar en elementos interactivos */
+button, .tono, nav a {
+    transition: all 0.3s ease;
+}
+
+button:hover, .tono:hover, nav a:hover {
+    filter: brightness(1.1);
+}

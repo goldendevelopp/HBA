@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBA Golden - Asistente Virtual</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Botón flotante para abrir el chatbot -->
+    <div class="chatbot-toggle">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Contenedor del chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <div class="chatbot-brand">
+                <div class="chatbot-logo">
+                    <img src="https://i.pinimg.com/736x/f3/0e/53/f30e532774c4dc018cc7c4534d14c0ee.jpg" alt="HBA Golden">
+                </div>
+                <div class="chatbot-title">
+                    <h3>Asistente HBA Golden</h3>
+                    <p>¿En qué puedo ayudarte hoy?</p>
+                </div>
+            </div>
+            <button class="chatbot-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-body">
+            <div class="chatbot-messages">
+                <!-- Mensaje de bienvenida -->
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>¡Hola! Soy tu asistente virtual de HBA Golden. ¿Cómo puedo ayudarte hoy? 😊</p>
+                    </div>
+                    <div class="message-time">Ahora</div>
+                </div>
+                
+                <!-- Opciones rápidas -->
+                <div class="quick-options">
+                    <button class="quick-option">Productos más vendidos</button>
+                    <button class="quick-option">Consejos de skincare</button>
+                    <button class="quick-option">Estado de mi pedido</button>
+                    <button class="quick-option">Contactar con servicio al cliente</button>
+                </div>
+            </div>
+            
+            <div class="chatbot-input">
+                <input type="text" placeholder="Escribe tu mensaje..." class="message-input">
+                <button class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
